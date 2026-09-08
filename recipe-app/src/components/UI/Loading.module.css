@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+}
+
+.spinner {
+  display: block;
+  border-style: solid;
+  border-color: var(--rule);
+  border-top-color: var(--basil);
+  border-radius: 50%;
+  animation: spin 900ms linear infinite;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Motion preference is respected: the spinner degrades to a static ring. */
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 3s;
+  }
+}

@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background-color: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+/* The focus highlight is driven by React state rather than :focus-within so the
+   same visual can later be triggered programmatically (e.g. a keyboard shortcut). */
+.focused {
+  border-color: var(--basil);
+  box-shadow: 0 0 0 3px var(--sage-wash);
+}
+
+.leadIcon {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.input::placeholder {
+  color: var(--muted);
+}
+
+.clear {
+  display: inline-flex;
+  padding: 0.2rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.clear:hover {
+  color: var(--paprika);
+}

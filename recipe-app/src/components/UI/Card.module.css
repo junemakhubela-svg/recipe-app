@@ -1,0 +1,17 @@
+.card {
+  position: relative;
+  background-color: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+
+.elevated {
+  box-shadow: 0 12px 28px -22px rgba(31, 36, 33, 0.65);
+}
+
+/* Hover transform selector 2 of 3. */
+.card:hover {
+  border-color: var(--basil);
+}

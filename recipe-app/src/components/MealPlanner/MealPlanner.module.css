@@ -1,0 +1,239 @@
+.planner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.plannerSummary {
+  padding: 1rem 1.15rem;
+  background-color: var(--sage-wash);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+}
+
+.summaryCount {
+  margin: 0 0 0.6rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.summaryTrack {
+  height: 5px;
+  background-color: var(--paper);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.summaryFill {
+  display: block;
+  height: 100%;
+  background-color: var(--basil);
+  transition: width 260ms ease;
+}
+
+.weekGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.dayCard {
+  padding: 1rem;
+}
+
+.today {
+  border-color: var(--basil);
+}
+
+.dayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 0.65rem;
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.dayName {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.todayTag {
+  padding: 0.1rem 0.45rem;
+  background-color: var(--butter);
+  color: var(--ink);
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.slotList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.slotLabel {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.slot {
+  display: flex;
+  flex-direction: column;
+}
+
+.emptySlot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px dashed var(--rule);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease;
+}
+
+.emptySlot:hover {
+  border-color: var(--basil);
+  color: var(--basil);
+  background-color: var(--sage-wash);
+}
+
+.assigned {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem;
+  background-color: var(--sage-wash);
+  border-radius: 2px;
+}
+
+.assignedThumb {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 2px;
+  background-color: var(--rule);
+}
+
+.assignedText {
+  flex: 1;
+  min-width: 0;
+}
+
+.assignedTitle {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.assignedTime {
+  margin: 0.15rem 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.clearSlot {
+  flex-shrink: 0;
+  padding: 0.3rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.clearSlot:hover {
+  color: var(--paprika);
+}
+
+.pickerList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pickerRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  text-align: left;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.pickerRow:hover {
+  background-color: var(--sage-wash);
+  border-color: var(--basil);
+}
+
+.pickerThumb {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 2px;
+  background-color: var(--rule);
+}
+
+.pickerTitle {
+  display: block;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.pickerMeta {
+  display: block;
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Tablet: two columns. */
+@media (min-width: 768px) {
+  .weekGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: the full seven-column week reads as a real calendar. */
+@media (min-width: 1025px) {
+  .weekGrid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .dayCard {
+    padding: 0.85rem 0.7rem;
+  }
+
+  .assignedThumb {
+    display: none;
+  }
+}

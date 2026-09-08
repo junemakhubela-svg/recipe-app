@@ -1,0 +1,21 @@
+.figure {
+  margin: 0;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: var(--ink);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--ink);
+}
+
+.caption {
+  padding: 0.7rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--sage-wash);
+  background-color: var(--ink);
+}

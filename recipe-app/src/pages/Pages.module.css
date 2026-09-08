@@ -1,0 +1,289 @@
+/* ---------------------------------------------------------------------------
+   Pages.module.css
+   Layout rules shared by the five routed pages. Kept in one module because the
+   page shells are structurally identical; anything specific to a component
+   family lives in that family's own module instead.
+   --------------------------------------------------------------------------- */
+
+.page {
+  padding-bottom: 2rem;
+}
+
+/* --------------------------------- Home ---------------------------------- */
+.hero {
+  padding: 3.5rem 0 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.heroGreeting {
+  margin: 0 0 0.75rem;
+  color: var(--basil);
+  font-size: 1rem;
+}
+
+.heroTitle {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 7vw, 4rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  max-width: 15ch;
+}
+
+.heroBody {
+  margin: 0 0 2rem;
+  max-width: 56ch;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  padding: 2.25rem 0;
+}
+
+.statCard {
+  padding: 1.1rem;
+}
+
+.statIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-bottom: 0.75rem;
+  background-color: var(--sage-wash);
+  color: var(--basil);
+  border-radius: 50%;
+}
+
+.statValue {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.statLabel {
+  margin: 0.4rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.homeSection {
+  padding: 2rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.sectionHeading {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.sectionHead .sectionHeading {
+  margin-bottom: 0;
+}
+
+.sectionBody {
+  margin: 0 0 1.25rem;
+  max-width: 58ch;
+  color: var(--muted);
+}
+
+.pickGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+/* ------------------------------ Recipes page ------------------------------ */
+.searchRow {
+  margin-bottom: 1rem;
+}
+
+.notice {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.85rem;
+  background-color: var(--sage-wash);
+  border-left: 3px solid var(--basil);
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.resetRow {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+/* ------------------------------ Planner page ------------------------------ */
+.plannerToolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.25rem;
+}
+
+.pickerSearch {
+  margin-bottom: 1rem;
+}
+
+.pickerEmpty {
+  margin: 1.5rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ----------------------------- Favourites page ---------------------------- */
+.favoritesToolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.sortField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sortLabel {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.sortSelect {
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background-color: var(--surface);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.emptyPanel {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  border: 1px dashed var(--rule);
+  border-radius: 3px;
+  background-color: var(--sage-wash);
+}
+
+.emptyHeading {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.emptyText {
+  margin: 0 auto 1.5rem;
+  max-width: 42ch;
+  color: var(--muted);
+}
+
+/* -------------------------------- NotFound -------------------------------- */
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.notFoundIcon {
+  color: var(--basil);
+  margin-bottom: 1.25rem;
+}
+
+.notFoundCode {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--rule);
+}
+
+.notFoundTitle {
+  margin: 0.5rem 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+  font-weight: 600;
+  max-width: 18ch;
+}
+
+.notFoundBody {
+  margin: 0 0 2rem;
+  max-width: 46ch;
+  color: var(--muted);
+}
+
+.pathCode {
+  padding: 0.1rem 0.35rem;
+  background-color: var(--sage-wash);
+  border-radius: 2px;
+  font-size: 0.9em;
+}
+
+.notFoundActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.notFoundLink {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ------------------------------ Breakpoints ------------------------------- */
+/* Tablet: 768px – 1024px */
+@media (min-width: 768px) {
+  .statGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .pickGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: above 1024px */
+@media (min-width: 1025px) {
+  .pickGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero {
+    padding: 5rem 0 4rem;
+  }
+}

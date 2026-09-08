@@ -1,0 +1,52 @@
+/* ---------------------------------------------------------------------------
+   App.css — the layout shell only. Component-specific rules live in their own
+   CSS Modules; this file exists purely to position the header, main and footer.
+   --------------------------------------------------------------------------- */
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+  width: var(--shell-width);
+  margin-inline: auto;
+  padding-bottom: var(--space-5);
+}
+
+.app-error {
+  max-width: 52ch;
+  margin: var(--space-6) auto;
+  padding: var(--space-4);
+  text-align: center;
+  border: 1px solid var(--paprika);
+  border-radius: 3px;
+  background-color: var(--surface);
+}
+
+.app-error-title {
+  margin: 0 0 var(--space-2);
+  font-size: 1.5rem;
+  color: var(--paprika);
+}
+
+.app-error-body {
+  margin: 0 auto var(--space-3);
+  color: var(--muted);
+}
+
+/* Tablet: the shell gains breathing room above the fold. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app-main {
+    padding-bottom: var(--space-6);
+  }
+}
+
+/* Desktop: the shell is capped so line lengths stay readable on wide monitors. */
+@media (min-width: 1025px) {
+  .app-main {
+    padding-bottom: var(--space-6);
+  }
+}

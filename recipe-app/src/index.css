@@ -1,0 +1,131 @@
+/* ---------------------------------------------------------------------------
+   index.css — design tokens and global resets.
+   Every colour, spacing step and type size in the app resolves back to a
+   variable declared here, so a palette change is a one-file edit.
+   --------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Karla:wght@400;500;600&display=swap');
+
+:root {
+  /* Palette: kitchen-herb greens against warm paper, with paprika for warnings
+     and destructive actions only — never for decoration. */
+  --ink: #1f2421;
+  --paper: #f4f6f1;
+  --surface: #ffffff;
+  --basil: #2e6b4f;
+  --basil-deep: #1f4c37;
+  --paprika: #b33a22;
+  --butter: #f0c862;
+  --muted: #6b7169;
+  --rule: #dce0d6;
+  --sage-wash: #e9eee4;
+  --focus: #2e6b4f;
+
+  /* Type: one display serif for headings, one grotesque for everything else. */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Spacing scale on a 4px base. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+
+  /* Layout constants. */
+  --shell-width: min(1120px, 92vw);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typographic scale. Headings use the display face and tighter leading; body
+   copy keeps a comfortable measure through max-width rules at component level. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  max-width: 72ch;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--basil-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Global motion preference. Anything decorative stops; state-change transitions
+   collapse to an instant rather than disappearing. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile-first base sizes are above. Tablet raises the display scale. */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop widens the measure slightly for long-form method text. */
+@media (min-width: 1025px) {
+  body {
+    font-size: 17px;
+  }
+}
