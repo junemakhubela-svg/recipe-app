@@ -31,7 +31,7 @@ const Footer = () => {
         </nav>
 
         <p className={styles.footerNote}>
-          &copy; {currentYear} Pantry &amp; Plan. Built as a React capstone project.
+          &copy; {currentYear} Pantry &amp; Plan.
         </p>
       </div>
     </footer>
