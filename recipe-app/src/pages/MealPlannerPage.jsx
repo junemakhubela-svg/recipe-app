@@ -50,11 +50,11 @@ const MealPlannerPage = ({ recipes, mealPlan, onAssignMeal, onClearMeal, onReset
   const pickerResults = filterRecipes(recipes, { searchTerm: pickerSearch });
   const sortedPickerResults = isModalOpen
     ? [...pickerResults].sort((a, b) => {
-        const slotName = capitalizeText(activeSlot.slot);
-        const aMatch = a.category === slotName ? 0 : 1;
-        const bMatch = b.category === slotName ? 0 : 1;
-        return aMatch - bMatch;
-      })
+      const slotName = capitalizeText(activeSlot.slot);
+      const aMatch = a.category === slotName ? 0 : 1;
+      const bMatch = b.category === slotName ? 0 : 1;
+      return aMatch - bMatch;
+    })
     : [];
 
   return (
@@ -62,7 +62,7 @@ const MealPlannerPage = ({ recipes, mealPlan, onAssignMeal, onClearMeal, onReset
       <Header
         eyebrow="Plan"
         title="Your week"
-        subtitle="Fill any slot from the recipe index. The plan is saved to this browser automatically."
+        subtitle="Go ahead and fill any slot to your week with the meal of your choosing. Happy planning and Happy cooking."
       />
 
       <div className={styles.plannerToolbar}>
@@ -91,7 +91,7 @@ const MealPlannerPage = ({ recipes, mealPlan, onAssignMeal, onClearMeal, onReset
           <SearchBar
             value={pickerSearch}
             onSearchChange={setPickerSearch}
-            onSearchSubmit={() => {}}
+            onSearchSubmit={() => { }}
             placeholder="Filter this list…"
           />
         </div>
