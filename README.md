@@ -7,7 +7,7 @@ a full recipe with a technique video and an audio walkthrough, save favourites,
 and build a seven-day meal plan. Favourites and the weekly plan persist in
 `localStorage`, so closing the tab does not lose your week.
 
-![Home dashboard showing the greeting, statistics row and quick picks](./screenshots/01-home.png)
+![Home dashboard showing the greeting, statistics row and quick picks](./recipe-app/screenshots/01-home.png)
 
 > _Home dashboard showing the greeting, statistics row and quick picks_
 
@@ -23,7 +23,7 @@ and build a seven-day meal plan. Favourites and the weekly plan persist in
 - Explicit loading, empty and error states on every asynchronous boundary
 - Responsive layout across mobile, tablet and desktop; reduced-motion support
 
-![Recipes page with filters applied to narrow down the search](./screenshots/02-recipes.png)
+![Recipes page with filters applied to narrow down the search](./recipe-app/screenshots/02-recipes.png)
 
 > _Recipes page with filters applied and results narrowed_
 
@@ -40,7 +40,7 @@ and build a seven-day meal plan. Favourites and the weekly plan persist in
 | PostCSS + Autoprefixer | Vendor prefixing at build time |
 
 
-![Recipe detail view with the video player visible](./screenshots/03-detail.png)
+![Recipe detail view with the video player visible](./recipe-app/screenshots/03-detail.png)
 
 > _Recipe detail view with the video player visible_
 
@@ -66,7 +66,7 @@ src/
 Nesting reaches five levels: `App → RecipesPage → RecipeList → RecipeCard →
 Card → Button`.
 
-![Meal planner page showing the seven-day grid with meals assigned](./screenshots/04-planner.png)
+![Meal planner page showing the seven-day grid with meals assigned](./recipe-app/screenshots/04-planner.png)
 
 > _Meal planner showing the seven-day grid with meals assigned_
 
@@ -87,7 +87,7 @@ reading `localStorage` once on first mount, and writing each state change back
 to storage. Meal-plan updates spread the previous object into a new one rather
 than mutating it, because React compares state by reference.
 
-![Favourites page with several saved recipes](./screenshots/05-favorites.png)
+![Favourites page with several saved recipes](./recipe-app/screenshots/05-favorites.png)
 
 > _Favourites page with several saved recipes_
 
@@ -102,7 +102,7 @@ npm run preview  # serve the built bundle
 
 Requires Node 18 or newer.
 
-![Mobile view showing the open hamburger navigation](./screenshots/06-mobile.png)
+![Mobile view showing the open hamburger navigation](./recipe-app/screenshots/06-mobile.png)
 
 > _Mobile view showing the open hamburger navigation_
 
