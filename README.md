@@ -7,7 +7,9 @@ a full recipe with a technique video and an audio walkthrough, save favourites,
 and build a seven-day meal plan. Favourites and the weekly plan persist in
 `localStorage`, so closing the tab does not lose your week.
 
-> _[SCREENSHOT 1 — Home dashboard: greeting, statistics row and quick picks]_
+![Home dashboard showing the greeting, statistics row and quick picks](./screenshots/01-home.png)
+
+> _Home dashboard showing the greeting, statistics row and quick picks_
 
 ## Key Features Implemented
 
@@ -21,7 +23,9 @@ and build a seven-day meal plan. Favourites and the weekly plan persist in
 - Explicit loading, empty and error states on every asynchronous boundary
 - Responsive layout across mobile, tablet and desktop; reduced-motion support
 
-> _[SCREENSHOT 2 — Recipes page with filters applied and results narrowed]_
+![Recipes page with filters applied to narrow down the search](./screenshots/02-recipes.png)
+
+> _Recipes page with filters applied and results narrowed_
 
 ## Tech Stack & Tools Used
 
@@ -35,7 +39,10 @@ and build a seven-day meal plan. Favourites and the weekly plan persist in
 | lucide-react | Icon set |
 | PostCSS + Autoprefixer | Vendor prefixing at build time |
 
-> _[SCREENSHOT 3 — Recipe detail view with the video player visible]_
+
+![Recipe detail view with the video player visible](./screenshots/03-detail.png)
+
+> _Recipe detail view with the video player visible_
 
 ## Component Architecture & File Structure
 
@@ -59,7 +66,9 @@ src/
 Nesting reaches five levels: `App → RecipesPage → RecipeList → RecipeCard →
 Card → Button`.
 
-> _[SCREENSHOT 4 — Meal planner showing the seven-day grid with meals assigned]_
+![Meal planner page showing the seven-day grid with meals assigned](./screenshots/04-planner.png)
+
+> _Meal planner showing the seven-day grid with meals assigned_
 
 ## State Management & Data Flow Explained
 
@@ -78,7 +87,9 @@ reading `localStorage` once on first mount, and writing each state change back
 to storage. Meal-plan updates spread the previous object into a new one rather
 than mutating it, because React compares state by reference.
 
-> _[SCREENSHOT 5 — Favourites page with several saved recipes]_
+![Favourites page with several saved recipes](./screenshots/05-favorites.png)
+
+> _Favourites page with several saved recipes_
 
 ## Installation & Setup Guide
 
@@ -89,16 +100,16 @@ npm run build    # production bundle in /dist
 npm run preview  # serve the built bundle
 ```
 
-Requires Node 18 or newer. Place recipe images in `public/images/`, videos in
-`public/videos/` and audio in `public/audio/`, matching the paths in
-`src/data/recipesData.js`.
+Requires Node 18 or newer.
 
-> _[SCREENSHOT 6 — Mobile view showing the open hamburger navigation]_
+![Mobile view showing the open hamburger navigation](./screenshots/06-mobile.png)
+
+> _Mobile view showing the open hamburger navigation_
 
 ## Future Enhancements
 
-- Replace the mock database with a real API and server-side search
-- Generate a consolidated shopping list from the week's plan
-- Drag-and-drop reordering between planner slots
-- User accounts so favourites sync across devices
-- Portion scaling that recalculates ingredient quantities
+- The mock database can be replaced with a real API and server-side search
+- A consolidated shopping list can be generated from the week's plan
+- Drag-and-drop reordering feature can be added between planner slots
+- Implementation of user accounts so that saved favourites can sync across devices
+- Implementation of a portion scaling feature that recalculates ingredient quantities in the recipe details
